@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn</title>
+    <link rel="stylesheet" href="/stylesheets/styleLogIn.css" />
+    <link rel="stylesheet" href="/stylesheets/hover-min.css" />
+    <script
+      src="https://kit.fontawesome.com/8b047c725c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="navbar">
+      <a href="/"><img src="/public/logo.svg" /></a>
+      <div class="navButtons">
+        <a><p>NGOs</p></a>
+        <a><p>Products</p></a>
+        <a><p>Contact</p></a>
+        <a href="/log-in"><p><%=account%></p></a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="box">
+        <h1>Log In</h1>
+        <form action="/login" method="POST">
+          <label class="label-id" for="userId"
+            ><b>User ID : </b><br /><input
+              class="hvr-underline-from-center"
+              type="text"
+              id="userId"
+              name="username"
+              placeholder="jose32"
+          /></label>
+          <br />
+          <label class="label-Password" for="password"
+            ><b>Password : </b><br /><input
+              class="hvr-underline-from-center"
+              type="password"
+              id="password"
+              name="password"
+              placeholder=""
+          /></label>
+          <button value="submit" type="submit" class="submit-button">
+            <p>Submit</p>
+          </button>
+        </form>
+        <div class="sign-up">
+          <p>
+            Not Registered?
+            <a class="hvr-underline-from-center" href="/signup">Sign Up Now</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- <div class="background">
+        <div class="orange-ball2">
+          <div class="small11"></div>
+          <div class="small22"></div>
+        </div>
+      </div> -->
+
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+
+      <script src="/javascripts/form-script.js"></script>
+    </div>
+  </body>
+</html>

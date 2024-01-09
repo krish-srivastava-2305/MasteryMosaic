@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Dela+Gothic+One&family=Inter:wght@500&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Mooli&family=Oswald:wght@500&family=Poppins:ital,wght@0,600;1,300&family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: rgb(0, 0, 0);
+}
+html,body{
+    height: 100%;
+    background: #EFEAE3;
+    width: 100%;
+    font-family: 'Montserrat';
+    /* background-image: linear-gradient(to bottom, rgb(95, 95, 255),rgb(77, 77, 142)); */
+}
+.cursor{
+    background-color: rgba(209, 94, 0, 0.607);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 0;
+}
+.navbar{
+    width:100%;
+    height:8vw;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+}
+.navButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navButtons a::after{
+    content : "";
+    height : 100%;
+    position: absolute;
+    width:100%;
+    background-color: #000;
+    right:0;
+    bottom:-100%;
+    border-radius: 50%;
+    transition: ease-in-out 0.4s;
+}
+.navButtons a:hover::after{
+   bottom:0;
+    border-radius: 30px;
+}
+.navButtons a:hover p{
+    color: white;
+}
+.navButtons p{
+    position: relative;
+    z-index: 9;
+}
+
+.navButtons a{
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid rgba(88, 88, 88, 0.333);
+    margin-right: 10px;
+    background-color: transparent;
+    font-size: larger;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: ease-in-out .4s;
+    z-index: 9;
+  }
+.main{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    position: fixed;
+    z-index: 9;
+    width: 40%;
+    height: 85%;
+    /* background-color: #7e7e7e88; */
+    border-radius: 26px;
+    padding: 2vw;
+}
+.box{
+    box-shadow: rgba(196, 102, 26, 0.25) 0px 54px 55px, rgba(216, 91, 7, 0.12) 0px -12px 30px, rgba(246, 133, 40, 0.12) 0px 4px 6px, rgba(210, 119, 15, 0.17) 0px 12px 13px, rgba(226, 55, 8, 0.09) 0px -3px 5px;
+}
+.box h1{
+    text-align: center;
+}
+.box form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw 3vw;
+    padding:20px
+}
+.box form .label-id,.box form .label-Password{
+    width: 100%;
+    margin-bottom: 2vw;
+    font-size: 1.5vw;
+}
+
+#userId,#password{
+    height: 10%;
+    margin: 2vw 0.21vw;
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+#id::placeholder {
+    color: rgba(255, 255, 255, 0.664);
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+.sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.sign-up a{
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+.submit-button{
+    position: relative;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 26px;
+    font-size: 1.5vw;
+    padding: 1vw;
+    overflow: hidden;
+    font-weight: 700;
+    height:20%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+}
+.submit-button p{
+    position: relative;
+    z-index: 9;
+}
+.submit-button::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    bottom:-100%;
+    left:0;
+    transition: all ease-in-out 0.5s;
+}
+.submit-button:hover::after{
+    bottom: 0;
+    border-radius: 26px;
+    
+}
+.submit-button:hover p{
+    color: aliceblue;
+    transition: all ease-in-out 0.5s;
+}
+
+  input{
+    border-radius: 2px;
+    border :none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    padding: 0.4vw;
+}
+
+.background{
+    z-index: -9;
+    position: relative;
+    height: 50%;
+    width:100%;
+}
+.orange-ball2{
+    position: relative;
+    margin: auto;
+    height: 35vw;
+    width: 35vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    background: linear-gradient(#fe330a86,#ff5f1a41);
+    animation: anime11 8s linear infinite alternate;
+}
+.small11,.small22{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#fe330a86,#ff5f1a41);
+    border-radius: 50%;
+    animation: anime11 4s linear infinite alternate;
+}
+@keyframes anime11 {
+    from{
+        transform: translate(10%,-10%);
+    }
+    to{
+        transform: translate(-10%,10%);
+    }
+    
+}

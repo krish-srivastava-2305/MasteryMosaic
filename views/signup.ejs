@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/stylesheets/style-sign-up.css" />
+    <link rel="stylesheet" href="/stylesheets/hover-min.css" />
+    <script
+      src="https://kit.fontawesome.com/8b047c725c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="navbar">
+      <a href="/"><img src="/images/logo.svg" /></a>
+      <div class="navButtons">
+        <a><p>NGOs</p></a>
+        <a><p>Products</p></a>
+        <a><p>Contact</p></a>
+        <a href="/log-in"><p>Sign In</p></a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="box">
+        <form action="/register" method="post">
+          <fieldset class="first">
+            <legend><b>Personal Details</b></legend>
+            <label for="f_name"
+              >First Name : <br /><input
+                name="firstName"
+                type="text"
+                id="f_name"
+            /></label>
+            <label for="l_name"
+              >Last Name : <br /><input name="lastName" type="text" id="l_name"
+            /></label>
+            <label for="email"
+              >E-mail : <br /><input name="email" type="email" id="email"
+            /></label>
+            <label for="mob_num"
+              >Mobile Number : <br /><input
+                name="mobileNumber"
+                type="tel"
+                id="mob_num"
+            /></label>
+            <label for="dob"
+              >Date of Birth : <br /><input
+                name="dateOfBirth"
+                type="date"
+                id="dob"
+                min="1924-01-01"
+            /></label>
+          </fieldset>
+          <fieldset class="third">
+            <legend><b>Log In Details</b></legend>
+            <label for="username"
+              >User-Name : <br /><input
+                name="username"
+                type="text"
+                id="username"
+            /></label>
+            <label for="p"
+              >Password : <br /><input name="password" type="password" id="p"
+            /></label>
+            <label for="cpassword"
+              >Confirm Password : <br /><input type="password" id="cpassword"
+            /></label>
+          </fieldset>
+          <button value="submit" type="submit" class="submit-button">
+            <p>Submit</p>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/javascripts/sriptSignUp.js"></script>
+  </body>
+</html>
