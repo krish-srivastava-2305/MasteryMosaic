@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Dela+Gothic+One&family=Inter:wght@500&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Mooli&family=Oswald:wght@500&family=Poppins:ital,wght@0,600;1,300&family=Rubik&display=swap');
+body,html {
+    min-height: 100vh;
+    width:100%;
+    background: #EFEAE3;
+    font-family: 'Montserrat';
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    /* letter-spacing: 0.8px; */
+}
+.main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.navbar{
+    width:100%;
+    height:8vw;
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+}
+.navbar a{
+    padding: 0;
+    height: 100%;
+    width: 20%;
+  }
+
+  .navbar img{
+    height:100%;
+    width:50%
+  }
+.navButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    width: 40%;
+}
+.navButtons a::after{
+    content : "";
+    height : 100%;
+    position: absolute;
+    width:100%;
+    background-color: #000;
+    right:0;
+    bottom:-100%;
+    border-radius: 50%;
+    transition: ease-in-out 0.4s;
+}
+.navButtons a:hover::after{
+   bottom:0;
+    border-radius: 30px;
+}
+.navButtons a:hover{
+    color: white;
+}
+.navButtons p{
+    text-align: center;
+    position: relative;
+    z-index: 9;
+}
+
+.navButtons>a{
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid rgba(88, 88, 88, 0.333);
+    margin-right: 10px;
+    background-color: transparent;
+    font-size: larger;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    color : black;
+    transition: ease-in-out .4s;
+  }
+  .page1{
+    position: absolute;
+    height: 60vh;
+    width: 100%;
+    padding: 5vw;
+    /* background-color: #FE330A; */
+  }
+
+  .background{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    position: fixed;
+    /* top:0; */
+    z-index : 1;
+    left:0;
+    min-height: 100vh;
+    width:100%;
+}
+.orange-ball2{
+    position: relative;
+    margin: auto;
+    height: 35vw;
+    width: 35vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    background: linear-gradient(#FE330A,#ff981ae5);
+    animation: anime11 8s linear infinite alternate;
+}
+.small11,.small22{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#FE330A,#ff981ae5);
+    border-radius: 50%;
+    animation: anime11 4s linear infinite alternate;
+}
+@keyframes anime11 {
+    from{
+        transform: translate(10%,-10%);
+    }
+    to{
+        transform: translate(-10%,10%);
+    }
+    
+}
+.foreground{
+    position: absolute;
+    /* padding: 6vw; */
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+    width: 100%; 
+    z-index: 9;
+    background-color: transparent;
+}
+.foreground .page1>h1{
+    margin-top: 4vw;
+    font-size: 9vw;
+    font-weight: 700;
+    /* line-height: 4vw; */
+}
+.page2{
+    margin-top: 65vh;
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+}
+.page2 .card{
+    height: 20vw;
+    width: 25vw;
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: aqua;
+    position: relative;
+}
+.page2 .card:nth-child(2n){
+    height: 15vw;
+    width: 20vw;
+}
+.card>img{
+    height: 100%;
+    width: 100%;
+    transition: all ease-in-out 1s;
+}
+.card:hover img{
+    transform: scale(1.1);
+    
+}
+.info{
+    text-align: center;
+    color: #EFEAE3;
+    position: absolute;
+    transform: translateX(-50%);
+    left:50%;
+    top:70%;
+    z-index: 19;
+}
+.contact{
+    width: 100%;
+    display: flex;
+    gap:10px
+}
+.card h5{
+    color:rgba(195, 194, 194, 0.573)
+}

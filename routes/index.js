@@ -2,6 +2,7 @@ var express = require('express');
 // var expressSession = require('express-session')
 var router = express.Router();
 const userModel = require('./users')
+const NGOModel = require('./NGOs')
 const passport = require('passport');
 const localStrategy = require('passport-local')
 passport.use(new localStrategy(userModel.authenticate()))
@@ -56,6 +57,12 @@ router.get('/profile',isLoggedIn,function(req,res){
   const username = req.user.username
   console.log(username)
   res.render("index",{account : username })
+})
+
+router.get('/NGOs',async function(req,res){
+  const username = req.user.username
+  const ngos= await NGOModel.find();
+  res.render("ngo",{account:username , ngos})
 })
 
 function isLoggedIn(req,res,next){
