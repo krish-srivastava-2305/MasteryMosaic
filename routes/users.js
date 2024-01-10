@@ -9,6 +9,10 @@ const userSchema = new mongoose.Schema({
   email: String,
   mobileNumber: String,
   dateOfBirth: Date,
+  donated : {
+    type : Array,
+    default : []
+  }
 });
 
 userSchema.plugin(plm);

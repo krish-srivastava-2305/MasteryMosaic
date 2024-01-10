@@ -18,6 +18,9 @@ router.get('/log-in',function(req,res){
 router.get("/signUp",function(req,res){
   res.render("signup",{account:"Log In"})
 })
+router.get("/products",function(req,res){
+  res.render("products",{account:"Log In"})
+})
 
 router.post('/register',function(req,res){
   const { firstName, lastName, email, mobileNumber, dateOfBirth, username, password } = req.body;
@@ -60,9 +63,13 @@ router.get('/profile',isLoggedIn,function(req,res){
 })
 
 router.get('/NGOs',async function(req,res){
-  const username = req.user.username
+  // const username = req.user.username 
   const ngos= await NGOModel.find();
-  res.render("ngo",{account:username , ngos})
+  res.render("ngo",{account:"Sign Up" , ngos})
+})
+
+router.get('/registerNGO' , function(req,res){
+  res.render('registerNGO' , {account : "Sign Up"})
 })
 
 function isLoggedIn(req,res,next){

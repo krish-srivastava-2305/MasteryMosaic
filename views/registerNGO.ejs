@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style-register-ngo.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <a href="/"><img src="/images/logo.svg" /></a>
+        <div class="navButtons">
+          <a href="/ngos"><p>NGOs</p></a>
+          <a href="/products"><p>Products</p></a>
+          <a><p>Contact</p></a>
+          <a href="/log-in"><p><%=account%></p></a>
+        </div>
+      </div>
+      <div class="heading">
+        <h1>Join Our Dream</h1>
+        <h4>Fill this form and work with us</h4>
+      </div>
+      <div class="page1">
+        <form action="/submit-ngo" method="POST">
+          <div>
+            <label class="label" for="name">Name:</label>
+            <input class="input" type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label class="label" for="email">Email:</label>
+            <input
+              class="input"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div>
+            <label class="label" for="password">Password:</label>
+            <input
+              class="input"
+              type="password"
+              id="password"
+              name="password"
+              required
+            />
+          </div>
+          <div>
+            <label class="label" for="street">Street:</label>
+            <input
+              class="input"
+              type="text"
+              id="street"
+              name="address[street]"
+            />
+          </div>
+          <div>
+            <label class="label" for="city">City:</label>
+            <input class="input" type="text" id="city" name="address[city]" />
+          </div>
+          <div>
+            <label class="label" for="state">State:</label>
+            <input class="input" type="text" id="state" name="address[state]" />
+          </div>
+          <div>
+            <label class="label" for="country">Country:</label>
+            <input
+              class="input"
+              type="text"
+              id="country"
+              name="address[country]"
+            />
+          </div>
+          <div>
+            <label class="label" for="postalCode">Postal Code:</label>
+            <input
+              class="input"
+              type="text"
+              id="postalCode"
+              name="address[postalCode]"
+            />
+          </div>
+          <div>
+            <label class="label" for="phone">Phone:</label>
+            <input class="input" type="tel" id="phone" name="contact[phone]" />
+          </div>
+          <div>
+            <label class="label" for="ngoEmail">NGO Email:</label>
+            <input
+              class="input"
+              type="email"
+              id="ngoEmail"
+              name="contact[email]"
+            />
+          </div>
+          <div>
+            <label class="label" for="mission">Mission:</label>
+            <textarea id="mission" name="mission"></textarea>
+          </div>
+          <div>
+            <label class="label" for="logo">Logo:</label>
+            <input
+              class="file"
+              type="file"
+              id="logo"
+              name="logo"
+              accept="image/*"
+            />
+          </div>
+          <div>
+            <label class="label" for="image">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" />
+          </div>
+          <div class="submit">
+            <button type="submit"><p>Submit</p></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
