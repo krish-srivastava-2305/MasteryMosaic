@@ -35,10 +35,6 @@ const ngoSchema = new mongoose.Schema({
 
 module.exports = mongoose.model('NGO', ngoSchema);
 
-/** 
-* Paste one or more documents here
-*/
-
 
 
 
