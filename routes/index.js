@@ -60,7 +60,7 @@ router.get('/profile',isLoggedIn,function(req,res){
 })
 
 router.get('/NGOs',async function(req,res){
-  const username = req.user.username
+  const username = req.user.username 
   const ngos= await NGOModel.find();
   res.render("ngo",{account:username , ngos})
 })

@@ -31,7 +31,7 @@ design.addEventListener("click",()=>{
     design.style.color = 'white'
     selector1.style.visibility = 'visible'
     desc.innerHTML = 'Our team works with our clients to refine an idea and concept into an executable design. We create a final design that encompasses the brand narrative to bring stories to life and provide end-to-end design solutions from concept, design, and architectural drawings to 3D renderings.'
-    imgCon.style.backgroundImage = `url('https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project-p-1080.jpg')`
+    imgCon.style.backgroundImage = `url('https://i.pinimg.com/564x/e0/99/46/e0994695995dbce87d7befac44339649.jpg')`
 
     exec.style.color = '#5151513c'
     selector3.style.visibility = 'hidden'
@@ -44,7 +44,7 @@ project.addEventListener("click",()=>{
     project.style.color = 'white'
     selector2.style.visibility = 'visible'
     desc.innerHTML = 'Once we have a design, our production team takes the lead in bringing it to life. We manage all stages of the project, from build specifications and technical drawings to site surveys, vendor management, and 2D & 3D production. We have an extensive network of partners to meet each unique design and project need.'
-    imgCon.style.backgroundImage = `url('https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15d0_Project.webp')`
+    imgCon.style.backgroundImage = `url('https://i.pinimg.com/564x/07/a5/3b/07a53b6f08051d5413dd4a96772ae837.jpg')`
 
     design.style.color = '#5151513c'
     selector1.style.visibility = 'hidden'
@@ -57,7 +57,7 @@ exec.addEventListener("click",()=>{
     exec.style.color = 'white'
     selector3.style.visibility = 'visible'
     desc.innerHTML = 'We’re with you every step of the way, from the project initiation to launch day. Our production and design teams are onsite to direct and guide the process down to the last point of completion, ensuring success across the built space and experience.'
-    imgCon.style.backgroundImage = `url('https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15cd_Execution-p-1080.jpg')`
+    imgCon.style.backgroundImage = `url('https://i.pinimg.com/564x/b0/f3/c9/b0f3c9247b03a4388051dd369958613c.jpg')`
 
     project.style.color = '#5151513c'
     selector2.style.visibility = 'hidden'

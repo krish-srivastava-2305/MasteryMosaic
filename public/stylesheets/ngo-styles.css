@@ -88,6 +88,7 @@ a{
     height: 60vh;
     width: 100%;
     padding: 5vw;
+    overflow: hidden;
     /* background-color: #FE330A; */
   }
 
@@ -144,6 +145,15 @@ a{
     font-size: 9vw;
     font-weight: 700;
     /* line-height: 4vw; */
+    animation: move-up 0.8s linear 1;
+}
+@keyframes move-up {
+    from{
+        transform: translateY(100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
 }
 .page2{
     margin-top: 65vh;
@@ -163,6 +173,7 @@ a{
     border-radius: 30px;
     background-color: aqua;
     position: relative;
+    animation: cards 1s linear  1;
 }
 .page2 .card:nth-child(2n){
     height: 15vw;
@@ -193,4 +204,14 @@ a{
 }
 .card h5{
     color:rgba(195, 194, 194, 0.573)
+}
+
+@keyframes cards {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
 }
