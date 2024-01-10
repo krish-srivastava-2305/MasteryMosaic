@@ -72,34 +72,45 @@ router.get('/registerNGO' , function(req,res){
   res.render('registerNGO' , {account : "Sign Up"})
 })
 
-router.post('/register-ngo',function(req,res){
-  const {name, email,password,street,city,state,country,postalCode,phone,NGOEmail,mission,logo,image} = req.body;
-  const newNGO = new NGOModel({
-    name: name,
-    email: email,
-    address: {
-      street: street,
-      city: city,
-      state: state,
-      country: country,
-      postalCode: postalCode
-  },
-  contact: {
-      phone: phone,
-      email: NGOEmail
-  },
-  mission: mission,
-  logo: logo,
-  image: image  
-  })
+router.post('/register-ngo', async function(req, res) {
+  try {
+    const { name, email, password, street, city, state, country, postalCode, phone, NGOEmail, mission, logo, image } = req.body;
 
-  NGOModel.register(newNGO,password)
-    .then(function(registereduser){
-      passport.authenticate("local")(req,res,function(){
-        res.send("registered successfully!!!")
-      })
-    })
+    const existingNGO = await NGOModel.findOne({ name: name });
+    if (existingNGO) {
+      return res.render("error", { message: "User Already Exists" });
+    }
+
+    const newNGO = await NGOModel.create({
+      name: name,
+      email: email,
+      address: {
+        street: street,
+        city: city,
+        state: state,
+        country: country,
+        postalCode: postalCode
+      },
+      contact: {
+        phone: phone,
+        email: NGOEmail
+      },
+      mission: mission,
+      logo: logo,
+      image: image
+    });
+    
+    res.send("Registered successfully");
+  } catch (error) {
+    console.error("Error registering NGO:", error.message);
+    res.status(500).send("An error occurred during registration");
+  }
+});
+
+router.get('/school',function(req,res){
+  res.render("school")
 })
+
 
 function isLoggedIn(req,res,next){
   if(req.isAuthenticated()){

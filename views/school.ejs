@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5MXrj3ZVs7D8j76KUhL4fxgkrl4eIcR0"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/styles-school.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/"><img src="/images/logo.svg" /></a>
+      <div class="navButtons">
+        <a href="/NGOs"><p>NGOs</p></a>
+        <a href="/products"><p>Products</p></a>
+        <a href="/school"><p>Schools</p></a>
+        <a href="/log-in"><p>Sign Up</p></a>
+      </div>
+    </div>
+    <div class="page1">
+      <h1>Temple of Knowledge</h1>
+      <h4>Find <b>School</b> that suits you the most</h4>
+      <div class="permission">
+        <h5>Allow us your location:</h5>
+        <button class="location" onclick="getLocation()">
+          <p>My Location</p>
+        </button>
+      </div>
+    </div>
+    <div class="page2">
+      <div id="map"></div>
+    </div>
+
+    <script src="/javascripts/schools.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5MXrj3ZVs7D8j76KUhL4fxgkrl4eIcR0&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
