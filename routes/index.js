@@ -72,6 +72,35 @@ router.get('/registerNGO' , function(req,res){
   res.render('registerNGO' , {account : "Sign Up"})
 })
 
+router.post('/register-ngo',function(req,res){
+  const {name, email,password,street,city,state,country,postalCode,phone,NGOEmail,mission,logo,image} = req.body;
+  const newNGO = new NGOModel({
+    name: name,
+    email: email,
+    address: {
+      street: street,
+      city: city,
+      state: state,
+      country: country,
+      postalCode: postalCode
+  },
+  contact: {
+      phone: phone,
+      email: NGOEmail
+  },
+  mission: mission,
+  logo: logo,
+  image: image  
+  })
+
+  NGOModel.register(newNGO,password)
+    .then(function(registereduser){
+      passport.authenticate("local")(req,res,function(){
+        res.send("registered successfully!!!")
+      })
+    })
+})
+
 function isLoggedIn(req,res,next){
   if(req.isAuthenticated()){
     return next()
