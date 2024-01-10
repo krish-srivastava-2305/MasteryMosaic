@@ -186,7 +186,7 @@ a {
     animation: 2s anim-lineUp ease-out 0s 1;
 }
 
-.orange-ball {
+/* .orange-ball {
     height:40vw;
     width:40vw;
     top:50px;
@@ -246,7 +246,7 @@ a {
     border-radius: 50%;
     margin: auto;
     padding: 10px;
-}
+} */
 
 .heroSection {
     display:flex;
@@ -343,4 +343,43 @@ a {
 .img_l {
     background-image: url("/images/img_l.jpg");
     background-size: cover; 
+}
+
+.background{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index : -1;
+    min-height: 100vh;
+    width:100%;
+}
+.orange-ball2{
+    position: relative;
+    margin: auto;
+    height: 35vw;
+    width: 35vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    background: linear-gradient(#FE330A,#ff981ae5);
+    animation: anime11 8s linear infinite alternate;
+}
+.small11,.small22{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#FE330A,#ff981ae5);
+    border-radius: 50%;
+    animation: anime11 4s linear infinite alternate;
+}
+@keyframes anime11 {
+    from{
+        transform: translate(10%,-10%);
+    }
+    to{
+        transform: translate(-10%,10%);
+    }
+    
 }
