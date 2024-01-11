@@ -11,9 +11,9 @@
       <div class="navbar">
         <a href="/"><img src="/images/logo.svg" /></a>
         <div class="navButtons">
-          <a href="/ngos"><p>NGOs</p></a>
+          <a href="/NGOs"><p>NGOs</p></a>
           <a href="/products"><p>Products</p></a>
-          <a><p>Contact</p></a>
+          <a href="/school"><p>Schools</p></a>
           <a href="/log-in"><p><%=account%></p></a>
         </div>
       </div>
@@ -22,7 +22,7 @@
         <h4>Fill this form and work with us</h4>
       </div>
       <div class="page1">
-        <form action="/submit-ngo" method="POST">
+        <form action="/register-ngo" method="POST">
           <div>
             <label class="label" for="name">Name:</label>
             <input class="input" type="text" id="name" name="name" required />
@@ -37,7 +37,7 @@
               required
             />
           </div>
-          <div>
+          <!-- <div>
             <label class="label" for="password">Password:</label>
             <input
               class="input"
@@ -46,7 +46,7 @@
               name="password"
               required
             />
-          </div>
+          </div> -->
           <div>
             <label class="label" for="street">Street:</label>
             <input
@@ -100,18 +100,24 @@
             <textarea id="mission" name="mission"></textarea>
           </div>
           <div>
-            <label class="label" for="logo">Logo:</label>
+            <label class="label" for="logo">Logo(URL):</label>
             <input
-              class="file"
-              type="file"
+              class="input"
+              type="text"
               id="logo"
               name="logo"
               accept="image/*"
             />
           </div>
           <div>
-            <label class="label" for="image">Image:</label>
-            <input type="file" id="image" name="image" accept="image/*" />
+            <label class="label" for="image">Image(URL):</label>
+            <input
+              class="input"
+              type="text"
+              id="image"
+              name="image"
+              accept="image/*"
+            />
           </div>
           <div class="submit">
             <button type="submit"><p>Submit</p></button>

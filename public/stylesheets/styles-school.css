@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Dela+Gothic+One&family=Inter:wght@500&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Mooli&family=Oswald:wght@500&family=Poppins:ital,wght@0,600;1,300&family=Rubik&display=swap');
+body,html {
+    min-height: 100vh;
+    width:100%;
+    background: #EFEAE3;
+    font-family: 'Montserrat';
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    /* letter-spacing: 0.8px; */
+}
+.navbar{
+    width:100%;
+    height:8vw;
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+}
+.navbar a{
+    padding: 0;
+    height: 100%;
+    width: 20%;
+  }
+
+  .navbar img{
+    height:100%;
+    width:50%
+  }
+.navButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    width: 40%;
+}
+.navButtons a::after{
+    content : "";
+    height : 100%;
+    position: absolute;
+    width:100%;
+    background-color: #000;
+    right:0;
+    bottom:-100%;
+    border-radius: 50%;
+    transition: ease-in-out 0.4s;
+}
+.navButtons a:hover::after{
+   bottom:0;
+    border-radius: 30px;
+}
+.navButtons a:hover{
+    color: white;
+}
+.navButtons p{
+    text-align: center;
+    position: relative;
+    z-index: 9;
+}
+
+.navButtons>a{
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid rgba(88, 88, 88, 0.333);
+    margin-right: 10px;
+    background-color: transparent;
+    font-size: larger;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    color : black;
+    transition: ease-in-out .4s;
+  }
+.page1{
+    width: 100%;
+    height: 60vh;
+    padding:5vw;
+}
+.page1 h1{
+    font-size: 4vw;
+    font-weight: 700;
+}
+.page1 h4{
+    font-size: 2vw;
+    font-weight: 500;
+}
+.page1 .permission{
+    margin-top: 2vw;
+    height: 20vh;
+    width: 30vw;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.permission .location{
+    background-color: transparent;
+    padding:1vw;
+    border:2px solid rgba(117, 116, 116, 0.53);
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+.permission .location::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom:-100%;
+    left:0;
+    background-color: #000;
+    border-radius: 50%;
+    transition: all ease-in-out 0.5s;
+}
+.location:hover::after{
+    bottom:0;
+    border-radius: 30px;
+}
+.location p{
+    position: relative;
+    z-index: 9;
+    transition: all ease-in-out 0.5s;
+}
+.location:hover p{
+    color: white;
+}
+
+.page2{
+    min-height: 100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+    /* background-color: #5656569c; */
+}
+#map{
+    height: 80vh;
+    width: 60vw;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: relative;
+    z-index: 9;
+}
